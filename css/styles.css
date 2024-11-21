@@ -81,6 +81,7 @@ body .products .products__item {
 body .products .products__item .products-item__img {
   width: 12.5rem;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 body .products .products__item .products-item__title {
   font-weight: 700;
@@ -90,6 +91,9 @@ body .products .products__item .products-item__title {
 body .products .products__item .products-item__price {
   font-weight: 300;
   font-size: 0.9rem;
+}
+body .products .products__item .products-item__btn {
+  border-radius: 5px;
 }
 body .products .products__item .products-item__btn:hover {
   background-color: #333;

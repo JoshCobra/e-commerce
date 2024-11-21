@@ -1,9 +1,5 @@
-$white: #fff;
-$mainColor: #348f22; /*Mejor tener un color solido y luego agregar la transparencia si es necesario*/
-$textColor: #3f3f3f;
-$bgColor: #333;
-$titleWeight: 700;
-$fontFamily: 'Lexend', Arial, Helvetica, sans-serif;
+@import "./variables";
+
 
 @mixin flexbox($justify:space-between, $align:center) { 
     /* Teniendo variables facilitamos la modificación en caso de ser necesario*/
@@ -101,6 +97,7 @@ body {
             .products-item__img {
                 width: 12.5rem;
                 margin-bottom: 15px;
+                border-radius: 5px;
             }
 
             .products-item__title {
@@ -116,6 +113,7 @@ body {
 
             .products-item__btn {
                 @extend %btn;
+                border-radius: 5px;
             }
 
             .products-item__btn:hover {
