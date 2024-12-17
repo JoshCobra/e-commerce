@@ -28,6 +28,7 @@ body {
   font-family: "Lexend", Arial, Helvetica, sans-serif;
   color: #3f3f3f;
   margin: 0;
+  box-sizing: border-box;
 }
 body .header {
   /* Teniendo variables facilitamos la modificación en caso de ser necesario*/
@@ -137,13 +138,14 @@ body .cart {
   box-sizing: border-box;
   height: 80%;
   position: fixed;
-  right: -200%; /* Oculta el carrito */
+  right: 0; /* Oculta el carrito */
+  transform: translateX(200%);
   top: 108px;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.75);
   transition: all 0.5s ease;
 }
 body .cart.open {
-  right: 0;
+  transform: translateX(0);
 }
 body .cart .cart__top {
   display: flex;

@@ -15,6 +15,7 @@
     font-family: $fontFamily;
     color: $textColor;
     margin: 0;
+    box-sizing: border-box;
 }
 
 %btn {
@@ -167,13 +168,14 @@ body {
         box-sizing: border-box;
         height: 80%;
         position: fixed;
-        right: -200%; /* Oculta el carrito */
+        right: 0; /* Oculta el carrito */
+        transform: translateX(200%);
         top: 108px;
         box-shadow: -19px -1px 22px -15px rgba(0,0,0,0.75);
         transition: $transition;
 
         &.open {
-            right: 0;
+            transform: translateX(0);
         }
 
         .cart__top {
