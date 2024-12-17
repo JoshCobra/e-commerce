@@ -43,7 +43,7 @@ document.querySelector(".cart__closeIcon").addEventListener("click", () => {
 // When NodeLis, we need to add event listener for each
 function addToCart() {
     addToCartBtn.forEach((button, index) => {
-        if (button.classList.contains("products-item__btn--disabled")) {
+        if (button.classList.contains("item__btn--disabled")) {
             return null
         } else {
             button.addEventListener("click", () => {
