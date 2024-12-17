@@ -13,6 +13,8 @@ cartItemsIndicator.id = "cartItemsIndicator"
 cartItemsIndicator.textContent = "0"
 
 const addToCartBtn = document.querySelectorAll(".products-item__btn")
+const buyButton = document.querySelector(".cartBottom__buyButton")
+buyButton.style.display = "none"
 
 
 const item = document.querySelectorAll(".products__item")
@@ -39,7 +41,6 @@ document.querySelector(".cart__closeIcon").addEventListener("click", () => {
 
 // Add To Cart
 // When NodeLis, we need to add event listener for each
-
 function addToCart() {
     addToCartBtn.forEach((button, index) => {
         if (button.classList.contains("products-item__btn--disabled")) {
@@ -63,7 +64,19 @@ function addToCart() {
         }
     });
 }
+// --------------------------------------------------------------
 
+// Update Total Cart Items
+function updateCartItems() {
+    const cartItems = document.querySelectorAll(".cart__item").length;
+    cartItemsIndicator.textContent = cartItems
+
+    if (cartItems > 0) {
+        buyButton.style.display = "inline"
+    } else {
+        buyButton.style.display = "none"
+    }
+}
 // --------------------------------------------------------------
 
 // Remove From Cart
@@ -75,11 +88,5 @@ cart.addEventListener("click", (event) => {
     }
 });
 // --------------------------------------------------------------
-
-// Update Total Cart Items
-function updateCartItems() {
-    const cartItems = document.querySelectorAll(".cart__item").length;
-    cartItemsIndicator.textContent = cartItems
-}
 
 addToCart();

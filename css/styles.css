@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Mejor tener un color solido y luego agregar la transparencia si es necesario*/
-body .products .products__item .products-item__btn {
+body .cart .cart__bottom button, body .products .products__item .products-item__btn {
   font-family: "Lexend", Arial, Helvetica, sans-serif;
   border: none;
   padding: 1rem;
@@ -10,6 +10,7 @@ body .products .products__item .products-item__btn {
   color: #fff;
   font-size: 0.9rem;
   text-transform: uppercase;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -28,6 +29,7 @@ body {
   font-family: "Lexend", Arial, Helvetica, sans-serif;
   color: #3f3f3f;
   margin: 0;
+  box-sizing: border-box;
 }
 body .header {
   /* Teniendo variables facilitamos la modificación en caso de ser necesario*/
@@ -117,13 +119,10 @@ body .products .products__item .cart-item__quit {
 body .products .products__item .cart-item__quit.show {
   display: inline;
 }
-body .products .products__item .products-item__btn {
-  border-radius: 5px;
-}
 body .products .products__item .products-item__btn:hover {
   background-color: #333;
 }
-body .products .products__item .products-item__btn--disabled {
+body .products .products__item .item__btn--disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
@@ -137,13 +136,14 @@ body .cart {
   box-sizing: border-box;
   height: 80%;
   position: fixed;
-  right: -200%; /* Oculta el carrito */
+  right: 0; /* Oculta el carrito */
+  transform: translateX(200%);
   top: 108px;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.75);
   transition: all 0.5s ease;
 }
 body .cart.open {
-  right: 0;
+  transform: translateX(0);
 }
 body .cart .cart__top {
   display: flex;
@@ -157,6 +157,9 @@ body .cart .cart__top .cart__closeIcon {
 body .cart .cart__top .cart__closeIcon svg {
   width: 35px;
   height: 35px;
+}
+body .cart .cart__bottom button:hover {
+  background-color: #333;
 }
 body .cart article {
   border-bottom: 1px solid #333;
