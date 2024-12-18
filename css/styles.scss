@@ -89,14 +89,14 @@ body {
         background-image: url("../img/banner.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-y: 25%;
+        background-position: center;
         color: $white;
 
         .banner__title {
-            width: 100%;
+            width: 90%;
             font-weight: $titleWeight;
             font-size: 3rem;
-            margin: 10px;
+            margin: 10px auto;
         }
 
         .banner__subtitle {

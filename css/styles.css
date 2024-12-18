@@ -74,14 +74,14 @@ body .banner {
   background-image: url("../img/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 25%;
+  background-position: center;
   color: #fff;
 }
 body .banner .banner__title {
-  width: 100%;
+  width: 90%;
   font-weight: 700;
   font-size: 3rem;
-  margin: 10px;
+  margin: 10px auto;
 }
 body .banner .banner__subtitle {
   width: 100%;
